@@ -1,4 +1,11 @@
-let char = new Sorcerer('jooj');
-let monster = new BigMonster();
+let char = new Knight('Player');
+let monster = new LittleMonster();
 
-console.log(monster.name, monster.life, monster.atack);
+const stage = new Stage(
+    char,
+    monster,
+    document.querySelector('#char'),
+    document.querySelector('#monster')
+)
+
+stage.start();
